@@ -7,8 +7,8 @@ sock.connect(address)
 i = 0
 
 for i in range(0,100):
-    socket.sendall(i.str.encode())
-    reply = socket.recv(1024)
+    sock.sendall(str(i).encode())
+    reply = sock.recv(1024)
     print(reply)
 
 

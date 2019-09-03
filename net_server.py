@@ -6,6 +6,6 @@ sock.listen(5)
 while True:
     (connectedSock,clientAddress) = sock.accept()
     msg = connectedSock.recv(1024).decode()
-    msg = "Here's the data" + msg
+    msg = "Here's the data " + msg
     connectedSock.sendall(msg.encode())
 
