@@ -7,7 +7,5 @@ while True:
     (connectedSock,clientAddress) = sock.accept()
     msg = connectedSock.recv(1024).decode()
     msg = "Here's the data" + msg
-    sock.close()
-
-sock.sendall(msg.encode())
+    connectedSock.sendall(msg.encode())
 
